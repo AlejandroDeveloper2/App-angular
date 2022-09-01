@@ -1,0 +1,24 @@
+<div  *ngIf="seleccionado">
+    <div class="form">
+      <label class="form__label">
+        <mat-icon fontIcon="person"></mat-icon>
+        <span class="form__label__text">Nombre</span>
+      </label>
+      <input [(ngModel)]="seleccionado.nombre" placeholder="Nombre de la pelicula" type="text" class="form__input"/>
+      <label  class="form__label">
+        <mat-icon fontIcon="category"></mat-icon>
+        <span class="form__label__text">Genero</span>
+      </label>
+      <input [(ngModel)]="seleccionado.genero" placeholder="Genero de la pelicula" type="text" class="form__input"/>
+      <label  class="form__label">
+        <mat-icon fontIcon="person" ></mat-icon>
+        <span class="form__label__text">Director</span>    
+      </label>
+      <input [(ngModel)]="seleccionado.director" placeholder="Director de la pelicula" type="text" class="form__input"/>
+    </div>
+    <div class="labelContainer">
+      <h2 class="labelContainer__h2">{{seleccionado.nombre}}</h2>
+      <h2 class="labelContainer__h2">{{seleccionado.genero}}</h2>
+      <h2 class="labelContainer__h2">{{seleccionado.director}}</h2>
+    </div>
+</div>

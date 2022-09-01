@@ -1,0 +1,57 @@
+.MoviContainer{
+    display:grid;
+    grid-template-columns: repeat(2, max-content);
+    gap:2em;
+}
+
+/*Movie list styles*/
+.listTitle{
+    margin:2em 0;
+}
+
+.moviesList{
+    width: 40em;
+    height:fit-content;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #333;
+    padding:2em 0;
+    border-radius:1em;
+}
+
+.moviesList__movie{
+    list-style: none;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    border-bottom: 2px solid #fff;
+    padding:1em 0;
+    cursor: pointer;
+}
+.moviesList__movie:hover{
+    background-color: rgb(105, 99, 99);
+}
+
+.moviesList__moviesItem__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8em;
+}
+
+.moviesList__moviesItem__item--id{
+    display: flex;
+    background-color: blueviolet;
+    width: 2em;
+    height: 2em;
+    border-radius:50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: #fff;
+    text-align: center;
+}
+
