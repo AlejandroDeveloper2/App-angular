@@ -10,13 +10,6 @@ import { PELICULAS } from '../lista-peliculas';
   styleUrls: ['./peliculas.component.css']
 })
 export class PeliculasComponent implements OnInit {
-  // pelicula:Pelicula = {
-  //   id:1,
-  //   nombre:"Spiderman 3",
-  //   genero:"Acción, superheroes",
-  //   director:"No se el nombre"
-  // }
-
   peliculas = PELICULAS;
 
   seleccionado?: Pelicula;

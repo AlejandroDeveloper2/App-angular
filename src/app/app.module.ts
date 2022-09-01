@@ -6,12 +6,14 @@ import {MatIconModule} from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PeliculasComponent } from './peliculas/peliculas.component';
+import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    PeliculaDetalleComponent
   ],
   imports: [
     BrowserModule,

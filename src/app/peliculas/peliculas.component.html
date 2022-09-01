@@ -1,36 +1,12 @@
 <div class="MoviContainer">
-<!-- <h2 class="listTitle">Lista de peliculas</h2> -->
-<ul class="moviesList">
-  <li *ngFor ="let peliculaItem of peliculas" class="moviesList__movie" (click)="seleccionar(peliculaItem)">
-    <p class="moviesList__moviesItem__item--id" ><span class="text">{{peliculaItem.id}}</span></p>
-    <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.nombre}}</span></p>
-    <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.genero}}</span></p>
-    <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.director}}</span></p>
-  </li>
-</ul>
-
-<div  *ngIf="seleccionado">
-  <div class="form">
-    <label class="form__label">
-      <mat-icon fontIcon="person"></mat-icon>
-      <span class="form__label__text">Nombre</span>
-    </label>
-    <input [(ngModel)]="seleccionado.nombre" placeholder="Nombre de la pelicula" type="text" class="form__input"/>
-    <label  class="form__label">
-      <mat-icon fontIcon="category"></mat-icon>
-      <span class="form__label__text">Genero</span>
-    </label>
-    <input [(ngModel)]="seleccionado.genero" placeholder="Genero de la pelicula" type="text" class="form__input"/>
-    <label  class="form__label">
-      <mat-icon fontIcon="person" ></mat-icon>
-      <span class="form__label__text">Director</span>    
-    </label>
-    <input [(ngModel)]="seleccionado.director" placeholder="Director de la pelicula" type="text" class="form__input"/>
-  </div>
-  <div class="labelContainer">
-    <h2 class="labelContainer__h2">{{seleccionado.nombre}}</h2>
-    <h2 class="labelContainer__h2">{{seleccionado.genero}}</h2>
-    <h2 class="labelContainer__h2">{{seleccionado.director}}</h2>
-  </div>
-</div>
+  <!-- <h2 class="listTitle">Lista de peliculas</h2> -->
+  <ul class="moviesList">
+    <li *ngFor ="let peliculaItem of peliculas" class="moviesList__movie" (click)="seleccionar(peliculaItem)">
+      <p class="moviesList__moviesItem__item--id" ><span class="text">{{peliculaItem.id}}</span></p>
+      <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.nombre}}</span></p>
+      <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.genero}}</span></p>
+      <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.director}}</span></p>
+    </li>
+  </ul>
+  <dadb-pelicula-detalle [seleccionado]="seleccionado"></dadb-pelicula-detalle>
 </div>
