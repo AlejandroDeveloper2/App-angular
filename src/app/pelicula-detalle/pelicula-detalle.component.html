@@ -15,6 +15,7 @@
         <span class="form__label__text">Director</span>    
       </label>
       <input [(ngModel)]="seleccionado.director" placeholder="Director de la pelicula" type="text" class="form__input"/>
+      <button (click)="guardar()">Guardar</button>
     </div>
     <div class="labelContainer">
       <h2 class="labelContainer__h2">{{seleccionado.nombre}}</h2>
