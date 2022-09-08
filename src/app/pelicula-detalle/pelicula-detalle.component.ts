@@ -21,12 +21,22 @@ export class PeliculaDetalleComponent implements OnInit {
   ) { }
 
   getPelicula():void{
-    const id=Number(this.route.snapshot.paramMap.get('id'));
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.peliculaService.getPelicula(id).subscribe(pelicula=>this.seleccionado = pelicula)
   }
 
   ngOnInit(): void {
     this.getPelicula();
   }
+
+regresar():void{
+  this.location.back();
+}
+
+guardar():void{
+  if(this.seleccionado){
+    this.peliculaService.actualizar(this.seleccionado).subscribe(()=>this.regresar())
+  }
+}
 
 }
