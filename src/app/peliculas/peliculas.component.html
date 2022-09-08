@@ -1,12 +1,21 @@
 <div class="MoviContainer">
   <!-- <h2 class="listTitle">Lista de peliculas</h2> -->
   <ul class="moviesList">
-    <li *ngFor ="let peliculaItem of peliculas" class="moviesList__movie" (click)="seleccionar(peliculaItem)">
+    <!-- <li *ngFor ="let peliculaItem of peliculas" class="moviesList__movie" (click)="seleccionar(peliculaItem)">-->
+      <!-- <p class="moviesList__moviesItem__item--id" ><span class="text">{{peliculaItem.id}}</span></p>
+      <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.nombre}}</span></p>
+      <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.genero}}</span></p>
+      <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.director}}</span></p> -->
+      
+    <!-- </li> -->
+    <li *ngFor ="let peliculaItem of peliculas" class="moviesList__movie"
+        routerLink="/detalle/{{peliculaItem.id}}"
+    >
       <p class="moviesList__moviesItem__item--id" ><span class="text">{{peliculaItem.id}}</span></p>
       <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.nombre}}</span></p>
       <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.genero}}</span></p>
       <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.director}}</span></p>
     </li>
   </ul>
-  <dadb-pelicula-detalle [seleccionado]="seleccionado"></dadb-pelicula-detalle>
+  <!-- <dadb-pelicula-detalle [seleccionado]="seleccionado"></dadb-pelicula-detalle> -->
 </div>

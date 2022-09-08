@@ -7,13 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PeliculasComponent } from './peliculas/peliculas.component';
 import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.component';
+import { MensajesComponent } from './mensajes/mensajes.component';
+import { TableroComponent } from './tablero/tablero.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PeliculasComponent,
-    PeliculaDetalleComponent
+    PeliculaDetalleComponent,
+    MensajesComponent,
+    TableroComponent
   ],
   imports: [
     BrowserModule,

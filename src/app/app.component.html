@@ -1,5 +1,11 @@
 <main class="container">
     <h1 class="title">{{title}}</h1>
-    <dadb-peliculas>
-    </dadb-peliculas>
+    <nav>
+        <a routerLink="/peliculas">Peliculas</a>
+        <a routerLink="/tablero">Tablero</a>
+    </nav>
+    <!-- <dadb-peliculas>
+    </dadb-peliculas> -->
+    <router-outlet></router-outlet>
+    <dadb-mensajes></dadb-mensajes>
 </main>
