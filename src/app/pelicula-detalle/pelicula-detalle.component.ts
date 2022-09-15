@@ -29,14 +29,13 @@ export class PeliculaDetalleComponent implements OnInit {
     this.getPelicula();
   }
 
-regresar():void{
-  this.location.back();
-}
-
-guardar():void{
-  if(this.seleccionado){
-    this.peliculaService.actualizar(this.seleccionado).subscribe(()=>this.regresar())
+  regresar():void{
+    this.location.back();
   }
-}
 
+  guardar():void{
+    if(this.seleccionado){
+      this.peliculaService.actualizar(this.seleccionado).subscribe(()=>this.regresar())
+    }
+  }
 }

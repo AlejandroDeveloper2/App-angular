@@ -15,7 +15,23 @@
       <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.nombre}}</span></p>
       <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.genero}}</span></p>
       <p class="moviesList__moviesItem__item"><span class="text">{{peliculaItem.director}}</span></p>
+      <button class="button_delete" title="Borrar pelicula" (click)="borrar(peliculaItem)">
+        X
+      </button>
     </li>
   </ul>
   <!-- <dadb-pelicula-detalle [seleccionado]="seleccionado"></dadb-pelicula-detalle> -->
+  <div>
+    <label>Nueva pelicula:</label>
+    <input #peliculaNombre placeholder="Nombre de pelicula"/>
+    <br>
+    <label>Genero:</label>
+    <input #peliculaGenero placeholder="Genero de pelicula"/>
+    <br>
+    <label>Director:</label>
+    <input #peliculaDirector placeholder="Director de pelicula"/>
+    <br>
+    <button (click)="nuevo(peliculaNombre.value, peliculaGenero.value, peliculaDirector.value);
+    peliculaNombre.value=''; peliculaGenero.value=''; peliculaDirector.value='';">Crear</button>
+  </div>
 </div>

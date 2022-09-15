@@ -55,5 +55,18 @@ export class PeliculaService {
     )
   }
 
-  
+  crearNuevo(pelicula: Pelicula):Observable<Pelicula> {
+    return this.http.post<Pelicula>(this.peliculasUrl, pelicula, this.httpOptions).pipe(
+      tap((nuevaPelicula:Pelicula)=>this.registro(`Pelicula creada w/id=${nuevaPelicula.id}`)),
+      catchError(this.handleError<Pelicula>('crearNuevo'))
+    );
+  }
+
+  borrarPelicula(id:number):Observable<Pelicula> {
+    const url = `${this.peliculasUrl}/${id}`;
+    return this.http.delete<Pelicula>(url, this.httpOptions).pipe(
+      tap(_=>this.registro(`pelicula borrada id = ${id}`)),
+      catchError(this.handleError<Pelicula>('borrarPelicula'))
+    );
+  }
 }
